@@ -424,8 +424,8 @@ const totalTrailMiles = (trails) => {
 }
 
 // Get the shortest of all trails
-const shortyTrail = (trailArray) => {
-    let shortest = 0
+const shortestTrail = (trailArray) => {
+    let shortest = trailArray[0].length
     for (const trail of trailArray) {
         if(trail.length < shortest) {
             shortest = trail.length
@@ -439,7 +439,7 @@ const shortyTrail = (trailArray) => {
 const longTrail = (allTrails) => {
     let longest = 0
     for (const trail of allTrails) {
-        if(trail.length >> longest) {
+        if(trail.length > longest) {
             longest = trail.length
         }
     }
